@@ -1,4 +1,9 @@
-on: [push]
+on:
+  pull_request:
+    branches:
+    - main
+    paths:
+    - lib/index.js
 
 jobs:
   hello_world_job:
@@ -29,18 +34,11 @@ jobs:
       - name: Restore File
         run: echo ${{ secrets.FILE }} > ./.env
 
-      - name: set 
-        run: |
-          cat ./.env | while read line; do export $line; done
-          echo ${HELLO}
-
-      # - name: Hello world action step
-      #   uses: ./
-      #   with:
-      #     filePath: ./.env
+      - name: Restore OS Env Variables
+        uses: ./
+        with:
+          filePath: ./.env
 
       - name: Get the output time
         run: echo ${HELLO}
 
-      - name: Get the output time
-        run: echo ::add-mask::${HELLO}

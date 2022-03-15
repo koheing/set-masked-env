@@ -4,6 +4,14 @@ Set masked environment variables in workflow.
 The log when using the set environment variable will remain `masked` If you read the information registered in GitHub Secrets and set it in the environment variable.
 
 ## Examples
+
+- FILE (github secrets)
+```
+USER=user
+PASS=password
+```
+
+- ci.yml
 ```yml
 name: example
 on: [push]
@@ -24,9 +32,10 @@ jobs:
           filePath: ./.env
           # mask: false // option
 
-      - name: Print
-        run: echo "$HELLO"
-        # Output: ***
+      - name: Print out
+        run: echo $USER $PASS
+        # Output: *** ***
+        # Output: user password (if mask is set to `false`)
 ```
 
 ## Inputs
