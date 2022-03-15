@@ -30,7 +30,9 @@ jobs:
         run: echo ${{ secrets.FILE }} > ./.env
 
       - name: set 
-        run: cat ./.env | while read line; do export $line; done
+        run: |
+          cat ./.env | while read line; do export $line; done
+          echo ${HELLO}
 
       # - name: Hello world action step
       #   uses: ./
@@ -38,7 +40,7 @@ jobs:
       #     filePath: ./.env
 
       - name: Get the output time
-        run: echo $HELLO
+        run: echo ${HELLO}
 
       - name: Get the output time
-        run: echo ::add-mask::$HELLO
+        run: echo ::add-mask::${HELLO}
