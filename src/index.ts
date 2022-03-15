@@ -15,9 +15,9 @@ async function main() {
       .filter((it) => it.length > 0)
       .forEach((line) => {
         const [variable, value] = line.split('=')
-        // if (mask) {
-        //   setSecret(value)
-        // }
+        if (mask !== 'false') {
+          setSecret(value)
+        }
         exportVariable(variable, value)
       })
   } catch (e) {
