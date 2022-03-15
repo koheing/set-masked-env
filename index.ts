@@ -11,11 +11,10 @@ async function main() {
     const lines = source.replaceAll('\r\n', '\n').split('\n')
     
     lines.forEach((line) => {
+      console.log(`line: ${line}`)
       const [variable, value] = line.split('=')
       setSecret(value)
       exportVariable(variable, value)
-
-      console.log(`${variable}: ${value}`)
     })
   } catch (e) {
     setFailed(e)

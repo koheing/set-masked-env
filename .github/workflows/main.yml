@@ -37,7 +37,7 @@ jobs:
           path: './.env'
       # 「hello」ステップの出力を使用する
       - name: Get the output time
-        run: echo "The time was ${{ env.HELLO }}"
+        run: echo "The time was $HELLo"
 
       - name: Get the Web time
-        run: curl ${{ env.HELLO }}
+        run: curl $HELLO
