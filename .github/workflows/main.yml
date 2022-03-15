@@ -29,14 +29,16 @@ jobs:
       - name: Restore File
         run: echo ${{ secrets.FILE }} > ./.env
 
-      - name: Hello world action step
-        uses: ./
-        with:
-          filePath: ./.env
-          mask: false
+      - name: set 
+        run: cat ./.env > while read line; do export $line; done
+
+      # - name: Hello world action step
+      #   uses: ./
+      #   with:
+      #     filePath: ./.env
 
       - name: Get the output time
-        run: echo "The time was ${HELLO}"
+        run: echo $HELLO
 
       - name: Get the output time
-        run: echo "The time was ::add-mask::${HELLO}"
+        run: echo ::add-mask::$HELLO
