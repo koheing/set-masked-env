@@ -10,10 +10,10 @@ async function main() {
         const source = await readFileAsync(path, { encoding: 'utf8' });
         const lines = source.replaceAll('\r\n', '\n').split('\n');
         lines.forEach((line) => {
+            console.log(`line: ${line}`);
             const [variable, value] = line.split('=');
             (0, core_1.setSecret)(value);
             (0, core_1.exportVariable)(variable, value);
-            console.log(`${variable}: ${value}`);
         });
     }
     catch (e) {
