@@ -19,7 +19,7 @@ async function main() {
           setSecret(value)
         }
         exportVariable(variable, value)
-      });
+      })
   } catch (e) {
     setFailed(e)
   }
