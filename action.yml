@@ -1,17 +1,12 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'set-masked-env'
+description: 'Set masked env variables from file'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  filePath:
+    description: 'The path of the file you would like to import as an environment variable.'
     required: true
-    default: 'World'
-  
-  path:
-    description: file path
-    required: true
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  mask:
+    description: 'Set to false if you would not like to mask.'
+    default: true
 runs:
   using: 'node16'
   main: 'lib/index.js'
