@@ -1,8 +1,8 @@
 name: 'set-masked-env'
-description: 'set masked env variables from file'
+description: 'Set masked env variables from file'
 inputs:
   filePath:
-    description: 'Specify the path of the file you would like to read as an environment variable.'
+    description: 'The path of the file you would like to import as an environment variable.'
     required: true
   mask:
     description: 'Set to false if you would not like to mask.'

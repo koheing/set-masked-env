@@ -41,7 +41,7 @@ jobs:
 ## Inputs
 
 ### **filePath** (**required**)
-Specify the path of the file you'd like to read as an environment variable.
+The path of the file you'd like to import as an environment variable.
 
 ### mask (option)
 Default `true`. Set to false if you wouldn't like to mask.
