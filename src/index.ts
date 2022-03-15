@@ -14,7 +14,7 @@ async function main() {
       .filter((it) => it.length > 0)
       .forEach((line) => {
       const [variable, value] = line.split('=')
-      setSecret(value)
+      // setSecret(value)
       exportVariable(variable, value)
     })
   } catch (e) {
