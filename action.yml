@@ -5,7 +5,7 @@ inputs:
     description: 'Specify the path of the file you would like to read as an environment variable.'
     required: true
   mask:
-    description: 'Set to false if you would not want to mask.'
+    description: 'Set to false if you would not like to mask.'
     default: true
 runs:
   using: 'node16'
