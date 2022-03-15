@@ -1,12 +1,12 @@
-name: 'set-multi-secrets'
-description: 'set multiple secrets from file'
+name: 'set-masked-env'
+description: 'set masked env variables from file'
 inputs:
-  path:
-    description: file path
+  filePath:
+    description: 'Specify the path of the file you would like to read as an environment variable.'
     required: true
   mask:
-    description: mask env variables imported from file path
-    default: false
+    description: 'Set to false if you would not want to mask.'
+    default: true
 runs:
   using: 'node16'
   main: 'lib/index.js'

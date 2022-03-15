@@ -1,5 +1,5 @@
 {
-  "name": "set-multi-secret",
+  "name": "set-masked-env",
   "version": "0.0.0",
   "main": "lib/index.js",
   "scripts": {

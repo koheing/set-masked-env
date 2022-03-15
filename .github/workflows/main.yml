@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Set Masked Env
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
       - name: Hello world action step
         uses: ./
         with:
-          path: ./.env
+          filePath: ./.env
 
       - name: Get the output time
         run: echo "The time was $HELLO"
