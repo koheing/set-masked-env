@@ -4,6 +4,9 @@ inputs:
   path:
     description: file path
     required: true
+  mask:
+    description: mask env variables imported from file path
+    default: false
 runs:
   using: 'node16'
   main: 'lib/index.js'

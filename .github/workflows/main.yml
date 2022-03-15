@@ -30,12 +30,12 @@ jobs:
         run: echo ${{ secrets.FILE }} > ./.env
 
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: ./
         with:
           path: ./.env
-      # 「hello」ステップの出力を使用する
+
       - name: Get the output time
         run: echo "The time was $HELLO"
 
-      - name: Get the Web time
-        run: curl $HELLO
+      - name: Get the output time
+        run: echo "The time was $HELLO"
