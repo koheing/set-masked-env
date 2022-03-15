@@ -33,9 +33,13 @@ jobs:
         uses: ./
         with:
           filePath: ./.env
+          mask: false
 
       - name: Get the output time
         run: echo "The time was $HELLO"
 
       - name: Get the output time
-        run: echo "The time was $HELLO"
+        run: echo "The time was ::add-mask::$HELLO"
+
+      - name: Get the output time
+        run: curl ::add-mask::$HELLO
