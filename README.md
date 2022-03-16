@@ -3,7 +3,7 @@
 Set masked environment variables in workflow.  
 The log when using the set environment variable will remain `masked` If you read the information registered in GitHub Secrets and set it in the environment variable.
 
-## Examples
+## Example
 
 - FILE (github secrets)
 ```
@@ -27,7 +27,7 @@ jobs:
         run: echo ${{ secrets.FILE }} > ./.env
       
       - name: set masked environment variables
-        uses: koheing/set-masked-env@v1.0
+        uses: koheing/set-masked-env@v1.1
         with:
           filePath: ./.env
           # mask: false // option
