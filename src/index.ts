@@ -9,7 +9,7 @@ async function main() {
     const path = getInput('filePath')
     const mask = getInput('mask')
     const source = await readFileAsync(path, { encoding: 'utf8' })
-    const lines = source.split('\n')
+    const lines = source.replace(/\r\n/g, '\n').split('\n')
 
     lines
       .filter((it) => it.length > 0)

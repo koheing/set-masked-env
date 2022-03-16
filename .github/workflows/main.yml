@@ -40,5 +40,4 @@ jobs:
           filePath: ./.env
 
       - name: Get the output time
-        run: echo ${HELLO}
-
+        run: echo ${HELLO} ${WORLD}
