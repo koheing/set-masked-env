@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "ncc build src/index.ts -o lib --minify --license LICENSE"
   },
   "author": "koheing",
   "license": "MIT",
   "devDependencies": {
+    "@vercel/ncc": "^0.33.3",
     "prettier": "^2.5.1",
     "typescript": "^4.6.2"
   },
