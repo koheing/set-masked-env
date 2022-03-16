@@ -40,5 +40,10 @@ jobs:
           filePath: ./.env
 
       - name: Get the output time
-        run: echo ${HELLO} ${WORLD}
+        run: echo ${HELLO}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: ./.env
 
