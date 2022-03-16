@@ -32,9 +32,7 @@ jobs:
         run: npm ci
 
       - name: Restore File
-        run: |
-          touch ./.env
-          echo ${{ secrets.FILE }} > ./.env
+        run: echo "${{ secrets.FILE }}" > ./.env          
 
       - name: Restore OS Env Variables
         uses: ./
@@ -42,10 +40,5 @@ jobs:
           filePath: ./.env
 
       - name: Get the output time
-        run: echo ${HELLO}
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: artifact
-          path: ./.env
+        run: echo ${HELLO} ${WORLD}
 

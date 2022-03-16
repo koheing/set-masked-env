@@ -10,7 +10,6 @@ async function main() {
     const mask = getInput('mask')
     const source = await readFileAsync(path, { encoding: 'utf8' })
     const lines = source.split('\n')
-    console.log(lines.length, source)
 
     lines
       .filter((it) => it.length > 0)
