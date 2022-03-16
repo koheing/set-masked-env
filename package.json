@@ -1,6 +1,6 @@
 {
   "name": "set-masked-env",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "ncc build src/index.ts -o lib --minify --license LICENSE"
