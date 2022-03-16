@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Restore File
-        run: echo ${{ secrets.FILE }} > ./.env
+        run: echo "${{ secrets.FILE }}" > ./.env
 
       - name: Restore OS Env Variables
         uses: ./

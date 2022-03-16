@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Restore Env File
-        run: echo ${{ secrets.FILE }} > ./.env
+        run: echo "${{ secrets.FILE }}" > ./.env
       
       - name: set masked environment variables
         uses: koheing/set-masked-env@v1.1
