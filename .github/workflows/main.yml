@@ -2,8 +2,6 @@ on:
   pull_request:
     branches:
     - main
-    paths:
-    - lib/index.js
   
   workflow_dispatch:
 
