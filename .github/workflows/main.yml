@@ -4,6 +4,8 @@ on:
     - main
     paths:
     - lib/index.js
+  
+  workflow_dispatch:
 
 jobs:
   hello_world_job:
@@ -41,4 +43,3 @@ jobs:
 
       - name: Get the output time
         run: echo ${HELLO}
-

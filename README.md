@@ -27,7 +27,7 @@ jobs:
         run: echo "${{ secrets.FILE }}" > ./.env
       
       - name: set masked environment variables
-        uses: koheing/set-masked-env@v1.2
+        uses: koheing/set-masked-env@v1.1
         with:
           filePath: ./.env
           # mask: false // option
